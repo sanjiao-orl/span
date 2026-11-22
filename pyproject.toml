@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chapspan"
+dynamic = ["version"]
+description = "Local-first long-form fiction research workbench"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0.3,<7"]
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "sanjiao-orl" }]
+keywords = ["fiction", "novel", "cli", "epub", "markdown", "reading", "ai-agent"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/sanjiao-orl/span"
+Repository = "https://github.com/sanjiao-orl/span"
+Issues = "https://github.com/sanjiao-orl/span/issues"
+
+[project.scripts]
+span = "chapspan.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "chapspan.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

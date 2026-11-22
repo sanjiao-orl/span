@@ -1,0 +1,10 @@
+/.local-study/
+/dist/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+wheelhouse/
+.pytest_cache/

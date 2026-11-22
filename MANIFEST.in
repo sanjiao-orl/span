@@ -1,0 +1,16 @@
+include LICENSE
+include pyproject.toml
+include README.md
+include packaging/AGENTS.md
+recursive-include src *.py
+
+exclude AGENTS.md
+exclude CHANGELOG.md
+exclude CONTRIBUTING.md
+prune .github
+prune docs
+prune tests
+prune scripts
+prune dist
+prune .local-study
+global-exclude __pycache__ *.py[cod]
